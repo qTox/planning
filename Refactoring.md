@@ -126,9 +126,11 @@ Only specifies the order, not definite times
 
 - [ ] complete cmake transistion
 - [ ] somewhere should be "merge ui/redesign"
+  - WIP by @Diadlo
 - [ ] make module == subproject
 - [ ] reorder the files, as defined above, no code changes yet
 - [ ] define Interface for Core, ie create clean Header files
+  - started by @sudden6, see [Core-Classdiagramm](Core-Classdiagramm.png)
 - [ ] implement the new Core interface step by step
 - [ ] <a name="unit-tests">create unit-tests for Core</a>
   - [ ] setup tests with ToxId as example
