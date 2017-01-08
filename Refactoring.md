@@ -130,7 +130,8 @@ Only specifies the order, not definite times
 - [ ] make module == subproject
 - [ ] reorder the files, as defined above, no code changes yet
 - [ ] define Interface for Core, ie create clean Header files
-  - started by @sudden6, see [Core-Classdiagramm](Core-Classdiagramm.png)
+  - started by @sudden6, see [Core-Classdiagram](Core-Classdiagram.png) and
+  [ToxEncrypt-Classdiagram](ToxEncrypt-Classdiagram.png)
 - [ ] implement the new Core interface step by step
 - [ ] <a name="unit-tests">create unit-tests for Core</a>
   - [ ] setup tests with ToxId as example
