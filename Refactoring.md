@@ -124,7 +124,7 @@ Example: `class DBStorage : public IHistory, public IFileTransfers`
 # Timeline (milestones?)
 Only specifies the order, not definite times
 
-- [ ] complete cmake transistion
+- [x] complete cmake transistion
 - [ ] somewhere should be "merge ui/redesign"
   - WIP by @Diadlo
 - [ ] make module == subproject
@@ -133,9 +133,9 @@ Only specifies the order, not definite times
   - started by @sudden6, see [Core-Classdiagram](Core-Classdiagram.png) and
   [ToxEncrypt-Classdiagram](ToxEncrypt-Classdiagram.png)
 - [ ] implement the new Core interface step by step
-- [ ] <a name="unit-tests">create unit-tests for Core</a>
-  - [ ] setup tests with ToxId as example
-  - [ ] setup tests with ToxPk
+- [x] <a name="unit-tests">create unit-tests for Core</a>
+  - [x] setup tests with ToxId as example
+  - [x] setup tests with ToxPk
 - [ ] create SettingsInterface
   - [ ] port from the existing settings implementation
   - [ ] implement test/FakeSettings (to use it in tests)
