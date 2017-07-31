@@ -137,7 +137,7 @@ Example: `class DBStorage : public IHistory, public IFileTransfers`
 Only specifies the order, not definite times
 
 - [x] complete cmake transistion
-- [ ] somewhere should be "merge ui/redesign" (WIP by @Diadlo)
+- [x] somewhere should be "merge ui/redesign" (WIP by @Diadlo)
 - [ ] make module == subproject
 - [ ] reorder the files, as defined above, no code changes yet
 - [ ] define Interface for Core, ie create clean Header files
