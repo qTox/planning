@@ -1,6 +1,7 @@
 # qTox refactoring Plan
 
 List of the modules (should be a subprojects)
+  * [`model`](#model-module)
   * [`core`](#core-module)
   * [`widget`](#widget-module)
   * [`audio`](#audiovideo-module)
@@ -13,14 +14,21 @@ List of the modules (should be a subprojects)
   * [`test`](#unit-tests) (should be added)
 
 
-## Core module
-Will interface with c-toxcore
+## Model module
 
 ### Added:
   * `Friend` (*moved from non-module*)
   * `Group` (*moved from non-module*)
   * `FriendList` (*moved from non-module*)
   * `GroupList` (*moved from non-module*)
+  * `Message`
+    * `TextMessage`
+    * `FileTransfer` (*from ToxFile*)
+
+## Core module
+Will interface with c-toxcore
+
+### Added:
   * `toxsave` (*moved from persistence*)
   
 ### Removed:
@@ -28,7 +36,7 @@ Will interface with c-toxcore
   * ~~`coredefines.h`~~ (*kill it*)
   * ~~`indexedlist.h`~~ (*kill it*)
   * ~~`cstring.h`~~ (*kill it*)
-  * ~~`corestructs.h`~~ (*move ToxFile to CoreFile, make DhtServer it's own class?* agree **@sudden6 @Diadlo**)
+  * ~~`corestructs.h`~~ (*move ToxFile to FileTransfer, make DhtServer it's own class?* agree **@sudden6 @Diadlo**)
   
 ### Old:
   * `ToxId`
@@ -115,9 +123,13 @@ Example: `class DBStorage : public IHistory, public IFileTransfers`
 
 
 ## Non-module
+
+### Removed:
+  * ~~`Nexus`~~ (*should be replaced with DI*)
+
+### Old:
   * `RecursiveSignalBlocker`
   * `IPC`
-  * `Nexus`
   * `main.cpp`
 
 
@@ -125,8 +137,7 @@ Example: `class DBStorage : public IHistory, public IFileTransfers`
 Only specifies the order, not definite times
 
 - [x] complete cmake transistion
-- [ ] somewhere should be "merge ui/redesign"
-  - WIP by @Diadlo
+- [x] somewhere should be "merge ui/redesign" (WIP by @Diadlo)
 - [ ] make module == subproject
 - [ ] reorder the files, as defined above, no code changes yet
 - [ ] define Interface for Core, ie create clean Header files
